@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "BYekan";
+  src: url("/fonts/BYekan-webfont.eot");
+}
+
+@font-face {
+  font-family: "BYekan";
+  src: url("/fonts/BYekan-webfont.ttf");
+}
+
+@font-face {
+  font-family: "BYekan";
+  src: url("/fonts/BYekan-webfont - Copy.woff");
+}
+
+* {
+  font-family: "BYekan";
+}
+
+.Font-BYekan {
+  font-family: "BYekan" !important;
+}
+
+.Toastify__toast-container {
+  position: fixed !important;
+  top: 0px !important;
+  right: 0 !important;
+}
+
+@media screen and (min-width:481px) {
+  .Toastify__toast-container {
+    position: fixed !important;
+    top: 16px !important;
+    right: 16px !important;
+  }
+}
