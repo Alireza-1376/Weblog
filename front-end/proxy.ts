@@ -1,8 +1,16 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { jwtDecode } from "jwt-decode"
+import { JwtType } from './types/auth';
 
 export function proxy(request: NextRequest) {
     const cookie = request.cookies.get("LoginToken")?.value;
+    if (cookie && request.nextUrl.pathname == "/admin") {
+        const userInfo: JwtType = jwtDecode(cookie);
+        if (userInfo.role != "admin") {
+            return NextResponse.redirect(new URL('/', request.url))
+        }
+    }
     if (!cookie && request.nextUrl.pathname == "/auth/profile") {
         return NextResponse.redirect(new URL('/', request.url))
     }
@@ -15,5 +23,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/auth/login", "/auth/profile"],
+    matcher: ["/auth/login", "/auth/profile", "/admin"],
 }

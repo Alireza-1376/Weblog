@@ -34,3 +34,11 @@ export interface UserProfile {
     role: "user" | "admin";
     createdAt: string;
 }
+
+export type JwtType = {
+    id: string,
+    username: string,
+    role: string,
+    iat: number,
+    exp: number
+}
