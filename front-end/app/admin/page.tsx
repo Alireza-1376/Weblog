@@ -1,8 +1,9 @@
-import Dashboard from "./_components/Dashboard";
+import DashboardPage from "./_components/Dashboard";
+
 
 function AdminPage() {
     return (
-        <Dashboard />
+        <DashboardPage />
     )
 }
 

@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
 import { getAllArticles, getOneArticle } from "@/services/blogs";
 import { getComments } from "@/services/comment";
 import Content from "../_components/Content";
 import Popular from "../_components/Popular";
 import Comment from "../_components/Comment";
 import Special from "../_components/Special";
+
+
 
 
 export default async function ArticlePage(props: PageProps<'/article/[articleId]'>) {
@@ -36,11 +36,11 @@ export default async function ArticlePage(props: PageProps<'/article/[articleId]
                     {/* Popular Articles */}
                     <Popular popularArticles={popularArticles} />
                     {/* Comments */}
-                    <Comment comments={comments} articleId={articleId}/>
+                    <Comment comments={comments} articleId={articleId} />
                 </div>
 
                 {/* Sidebar */}
-                <Special specialArticles={specialArticles}/>
+                <Special specialArticles={specialArticles} />
 
             </div>
         </div>

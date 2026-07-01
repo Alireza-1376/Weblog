@@ -5,12 +5,14 @@ import States from "./_components/States";
 import Categories from "./_components/Categories";
 import Articles from "./_components/Articles";
 
+export const dynamic = 'force-static';
+
 export default async function Home() {
   const [allArticles, allCategories] = await Promise.all([
     getAllArticles(),
     getAllCategories()
   ])
-  
+
 
   return (
     <main>

@@ -9,7 +9,7 @@ export const registerUser = async (userData: Register) => {
         }
     })
     const data: ReciveRegisterData = await response.json()
-    return {statusCode : response.status , data : data};
+    return { statusCode: response.status, data: data };
 }
 
 export const loginUser = async (userData: Login) => {
@@ -24,12 +24,22 @@ export const loginUser = async (userData: Login) => {
     return data;
 }
 
-export const getUserProfile = async (token: string | undefined)=>{
-    const response = await fetch("http://localhost:4004/api/auth/profile" , {
-        headers : {
-            "Authorization" : `Bearer ${token}`
+export const getUserProfile = async (token: string | undefined) => {
+    const response = await fetch("http://localhost:4004/api/auth/profile", {
+        headers: {
+            "Authorization": `Bearer ${token}`
         }
     });
-    const user : UserProfile =await response.json()
-    return user ;
+    const user: UserProfile = await response.json()
+    return user;
+}
+
+export const getAllUsers = async (token: string | undefined) => {
+    const response = await fetch("http://localhost:4004/api/auth/users", {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    const data: UserProfile[] = await response.json();
+    return data;
 }

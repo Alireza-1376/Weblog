@@ -2,11 +2,13 @@ import { getArticleWithCategoryId } from "@/services/blogs";
 import Image from "next/image";
 import Link from "next/link";
 
+
 async function CategoryId(props: PageProps<'/category/[categoryId]'>) {
     const { categoryId } = await props.params;
     const { title } = await props.searchParams;
-    
-    const articles = await getArticleWithCategoryId(categoryId)
+
+    const articles = await getArticleWithCategoryId(categoryId);
+
     return (
         <section className="max-w-7xl mx-auto py-16 px-4">
             <h2 className="text-3xl font-bold mb-10">{title}</h2>

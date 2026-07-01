@@ -3,7 +3,7 @@ import { Blog } from "@/types/blog";
 export const getAllArticles = async () => {
     const response = await fetch("http://localhost:4004/api/articles", {
         next: {
-            revalidate: 10
+            revalidate: 10,
         }
     });
     const data: Blog[] = await response.json();
