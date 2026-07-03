@@ -2,7 +2,7 @@ import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
 
-function Articles({allArticles} : {allArticles : Blog[] }) {
+function Articles({ allArticles }: { allArticles: Blog[] }) {
     return (
         <section className="max-w-7xl mx-auto px-4 py-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-10">
@@ -14,13 +14,15 @@ function Articles({allArticles} : {allArticles : Blog[] }) {
                     return (
                         <Link href={`/article/${article.id}`} key={article.id} className="overflow-hidden rounded-2xl border border-gray-500 bg-white shadow-md transition hover:scale-[1.01] hover:shadow-lg">
                             <div className="relative h-56">
-                                <Image
-                                    src={`http://localhost:4004${article.image}`}
-                                    alt="/images/1.jfif"
-                                    fill
-                                    className="object-cover"
-                                    unoptimized
-                                />
+                                {article.image &&
+                                    <Image
+                                        src={`http://localhost:4004${article.image}`}
+                                        alt="/images/1.jfif"
+                                        fill
+                                        className="object-cover"
+                                        unoptimized
+                                    />
+                                }
                             </div>
 
                             <div className="p-5">

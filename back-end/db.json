@@ -70,6 +70,15 @@
       "categoryId": "cat1",
       "author": "قاسم بساکی",
       "createdAt": "2025-05-21T18:28:58.587Z"
+    },
+    {
+      "id": "8dypRItvke",
+      "title": "آموزش node.js",
+      "content": "آموزش کتابخانه express",
+      "image": "/public/1783085745301-702130863.jpeg",
+      "categoryId": "cat2",
+      "author": "alireza",
+      "createdAt": "2026-07-03T13:35:45.313Z"
     }
   ],
   "comments": [
@@ -132,6 +141,14 @@
       "author": "مهسا",
       "userId": "kvLLb020d6",
       "createdAt": "2026-07-01T12:11:12.624Z"
+    },
+    {
+      "id": "-MijI6nI4U",
+      "content": "عالی بود",
+      "articleId": "8dypRItvke",
+      "author": "alireza",
+      "userId": "iJBUGwRnmj",
+      "createdAt": "2026-07-03T13:37:03.450Z"
     }
   ],
   "users": [

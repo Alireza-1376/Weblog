@@ -4,7 +4,7 @@ import Sidebar from "./_components/Sidebar";
 
 
 export const metadata: Metadata = {
-    title: "پنل ادمین",
+    title: "داشبورد",
     description: "weblog , panel-admin",
 };
 

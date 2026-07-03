@@ -17,13 +17,15 @@ async function CategoryId(props: PageProps<'/category/[categoryId]'>) {
                     return (
                         <Link href="" key={article.id} className="overflow-hidden rounded-2xl border border-gray-500 bg-white shadow-md transition hover:scale-[1.01] hover:shadow-lg">
                             <div className="relative h-56">
-                                <Image
-                                    src={`http://localhost:4004${article.image}`}
-                                    alt="/images/1.jfif"
-                                    fill
-                                    className="object-cover"
-                                    unoptimized
-                                />
+                                {article.image &&
+                                    <Image
+                                        src={`http://localhost:4004${article.image}`}
+                                        alt="/images/1.jfif"
+                                        fill
+                                        className="object-cover"
+                                        unoptimized
+                                    />
+                                }
                             </div>
 
                             <div className="p-5">

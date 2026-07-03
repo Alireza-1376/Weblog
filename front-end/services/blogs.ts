@@ -3,7 +3,7 @@ import { Blog } from "@/types/blog";
 export const getAllArticles = async () => {
     const response = await fetch("http://localhost:4004/api/articles", {
         next: {
-            revalidate: 10,
+            tags: ["articles"]
         }
     });
     const data: Blog[] = await response.json();
@@ -21,3 +21,4 @@ export const getArticleWithCategoryId = async (id: string) => {
     const data: Blog[] = await response.json();
     return data;
 }
+

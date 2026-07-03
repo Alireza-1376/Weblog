@@ -5,7 +5,7 @@ import SidebarProvider from "@/context/ShowSidebar";
 
 
 export const metadata: Metadata = {
-  title: "وبلاگ",
+  title: "صفحه اصلی",
   description: "weblog",
 };
 

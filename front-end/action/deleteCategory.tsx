@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 
 
 export async function deleteCategory(id: string) {
+    console.log(id)
     const cookieStore = await cookies();
     const token = cookieStore.get("LoginToken")?.value;
 
@@ -17,6 +18,7 @@ export async function deleteCategory(id: string) {
             },
         }
     );
+    console.log(response)
     const data = await response.json()
 
     if (response.status == 200) {

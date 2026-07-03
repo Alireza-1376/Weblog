@@ -26,8 +26,6 @@ export default async function DashboardPage() {
         return new Date(comments.createdAt).getFullYear() >= new Date().getFullYear() - 1
     })
 
-    console.log(comments)
-
 
     const stats = [
         {

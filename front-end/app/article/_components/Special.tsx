@@ -17,13 +17,15 @@ function Special({ specialArticles }: { specialArticles: Blog[] }) {
                             className="flex gap-3 group"
                         >
                             <div className="relative w-24 h-20 shrink-0 overflow-hidden rounded-lg">
-                                <Image
-                                    src={`http://localhost:4004${item.image}`}
-                                    alt={item.title}
-                                    fill
-                                    unoptimized
-                                    className="object-cover"
-                                />
+                                {item.image &&
+                                    <Image
+                                        src={`http://localhost:4004${item.image}`}
+                                        alt={item.title}
+                                        fill
+                                        unoptimized
+                                        className="object-cover"
+                                    />
+                                }
                             </div>
 
                             <div>

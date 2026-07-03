@@ -16,13 +16,15 @@ function Popular({ popularArticles }: { popularArticles: Blog[] }) {
                         className="border rounded-xl overflow-hidden hover:shadow-lg transition"
                     >
                         <div className="relative h-48">
-                            <Image
-                                src={`http://localhost:4004${item.image}`}
-                                alt={item.title}
-                                fill
-                                unoptimized
-                                className="object-cover"
-                            />
+                            {item.image &&
+                                <Image
+                                    src={`http://localhost:4004${item.image}`}
+                                    alt={item.title}
+                                    fill
+                                    unoptimized
+                                    className="object-cover"
+                                />
+                            }
                         </div>
 
                         <div className="p-4">

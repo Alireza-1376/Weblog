@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
-    title: "دسته بندی",
+    title: "مدیریت دسته بندی",
     description: "weblog - categories",
 };
 
