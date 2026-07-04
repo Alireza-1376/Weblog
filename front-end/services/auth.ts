@@ -38,6 +38,9 @@ export const getAllUsers = async (token: string | undefined) => {
     const response = await fetch("http://localhost:4004/api/auth/users", {
         headers: {
             "Authorization": `Bearer ${token}`
+        },
+        next: {
+            tags: ['deleteUser']
         }
     })
     const data: UserProfile[] = await response.json();

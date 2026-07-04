@@ -85,7 +85,7 @@ export default async function DashboardPage() {
                 <section className="grid gap-6 lg:grid-cols-3">
                     {/* Recent Posts */}
                     <div className="p-2 lg:col-span-2 rounded-3xl border border-slate-400">
-                        <div className=" h-120 p-2 scrollbar-thin overflow-auto">
+                        <div className=" h-115 p-2 scrollbar-thin overflow-auto">
                             <div className="mb-6 flex items-center gap-2">
                                 <HiOutlineDocumentText
                                     size={22}
@@ -127,7 +127,7 @@ export default async function DashboardPage() {
                     </div>
                     {/* {comments} */}
                     <div className="rounded-3xl border border-slate-400 p-2">
-                        <div className="p-2 h-120 scrollbar-thin overflow-auto">
+                        <div className="p-2 h-115 scrollbar-thin overflow-auto">
                             <div className="mb-6 flex items-center gap-2">
                                 <HiOutlineChatBubbleLeftRight
                                     size={22}

@@ -70,15 +70,6 @@
       "categoryId": "cat1",
       "author": "قاسم بساکی",
       "createdAt": "2025-05-21T18:28:58.587Z"
-    },
-    {
-      "id": "8dypRItvke",
-      "title": "آموزش node.js",
-      "content": "آموزش کتابخانه express",
-      "image": "/public/1783085745301-702130863.jpeg",
-      "categoryId": "cat2",
-      "author": "alireza",
-      "createdAt": "2026-07-03T13:35:45.313Z"
     }
   ],
   "comments": [
@@ -143,38 +134,38 @@
       "createdAt": "2026-07-01T12:11:12.624Z"
     },
     {
-      "id": "-MijI6nI4U",
-      "content": "عالی بود",
-      "articleId": "8dypRItvke",
+      "id": "x41wX2VPjm",
+      "content": "a",
+      "articleId": "art1",
       "author": "alireza",
       "userId": "iJBUGwRnmj",
-      "createdAt": "2026-07-03T13:37:03.450Z"
+      "createdAt": "2026-07-04T07:50:23.906Z"
+    },
+    {
+      "id": "lQjQ_4KoJQ",
+      "content": "a",
+      "articleId": "art1",
+      "author": "alireza",
+      "userId": "iJBUGwRnmj",
+      "createdAt": "2026-07-04T07:50:25.691Z"
     }
   ],
   "users": [
     {
-      "id": "iJBUGwRnmj",
-      "username": "alireza",
-      "email": "alireza@gmail.com",
-      "password": "$2b$10$IpIYv2uDWKQi5dgIV0Wn..3pQnI7UOlyJD.dydrXy7PZonMDEXl9i",
-      "role": "admin",
-      "createdAt": "2026-06-28T09:35:52.142Z"
-    },
-    {
-      "id": "CF8UBtyCdS",
+      "id": "-9tF9oF03y",
       "username": "علیرضا",
       "email": "habibi@gmail.com",
-      "password": "$2b$10$SE5Eo4mYLdfWeudmjQVG0O7YrJZ6GYT5jyrk733YlyRKVAX9gdEfG",
-      "role": "user",
-      "createdAt": "2026-06-28T09:42:55.858Z"
+      "password": "$2b$10$Uz4Thr6nYTGrTn9D91.CGubuXKqdVlBW.CjmQQW9ROfQRz4YsIp3G",
+      "role": "admin",
+      "createdAt": "2026-07-04T08:30:37.041Z"
     },
     {
-      "id": "kvLLb020d6",
+      "id": "h3YpMt6bBX",
       "username": "مهسا",
       "email": "mahsa@gmail.com",
-      "password": "$2b$10$/fcBmgX3BWIFJCvNp51.fO5iGYgdciwIzlZTVN..PE.oGAAbq7h8S",
-      "role": "user",
-      "createdAt": "2026-07-01T12:10:48.845Z"
+      "password": "$2b$10$rrnpbQ6BzenCvO/I1ahkc.Z7L.TxXK6jmZauJAxHABw5sQlA3ToqG",
+      "role": "admin",
+      "createdAt": "2026-07-04T09:28:23.314Z"
     }
   ]
 }

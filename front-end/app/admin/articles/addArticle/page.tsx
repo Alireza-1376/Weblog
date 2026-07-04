@@ -1,7 +1,9 @@
-function page() {
+import Modal from "../_components/Modal";
+
+function Page() {
   return (
-    <div>page</div>
+    <Modal />
   )
 }
 
-export default page ;
+export default Page;

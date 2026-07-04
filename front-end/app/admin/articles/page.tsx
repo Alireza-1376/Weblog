@@ -20,7 +20,7 @@ export default async function ArticlesTable() {
     })
 
     return (
-        <div className="p-4 overflow-x-hidden w-screen md:w-auto h-[calc(100vh-67.2px)] md:col-span-8 lg:col-span-9 xl:col-span-10">
+        <div className="p-4 overflow-x-hidden w-screen md:w-full h-[calc(100vh-67.2px)] md:col-span-8 lg:col-span-9 xl:col-span-10">
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-md">
                 {/* Header */}
                 <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -45,7 +45,7 @@ export default async function ArticlesTable() {
 
                 {/* Table */}
                 <div className="overflow-x-auto scrollbar-thin">
-                    <table className="min-w-300 w-full">
+                    <table className=" w-full">
                         <thead>
                             <tr className="border-b border-slate-200">
                                 <th className="px-2 py-3 text-center text-sm font-bold text-slate-600">

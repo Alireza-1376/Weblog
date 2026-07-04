@@ -13,4 +13,4 @@ function Links({ Icon, title, url }: { Icon: IconType, title: string, url: strin
     )
 }
 
-export default Links
+export default Links ;
