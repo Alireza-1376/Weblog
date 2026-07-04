@@ -16,6 +16,14 @@ export default async function ArticlePage(props: PageProps<'/article/[articleId]
         getComments(articleId)
     ])
 
+    const sortComments = comments.sort((a, b) => {
+        const dateA = new Date(a.createdAt) ;
+        const dateB = new Date(b.createdAt) ;
+        if(dateA > dateB) return -1 ;
+        if(dateA < dateB) return 1 ;
+        return -1
+    })
+
     const specialArticles = allArticles.filter((article) => {
         return article.id != selectArticle.id
     }).slice(0, 5)

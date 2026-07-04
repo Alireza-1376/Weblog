@@ -100,54 +100,6 @@
       "articleId": "art3",
       "author": "حسین محمودی",
       "createdAt": "2023-03-11T10:45:00.000Z"
-    },
-    {
-      "id": "fkiW2u5y93",
-      "content": "تست 1",
-      "articleId": "art1",
-      "author": "alireza",
-      "userId": "iJBUGwRnmj",
-      "createdAt": "2026-07-01T11:51:53.755Z"
-    },
-    {
-      "id": "m59xXdemkH",
-      "content": "تست 2",
-      "articleId": "art1",
-      "author": "alireza",
-      "userId": "iJBUGwRnmj",
-      "createdAt": "2026-07-01T11:51:59.323Z"
-    },
-    {
-      "id": "WajQZDwwfI",
-      "content": "تست 3",
-      "articleId": "art1",
-      "author": "alireza",
-      "userId": "iJBUGwRnmj",
-      "createdAt": "2026-07-01T11:52:04.451Z"
-    },
-    {
-      "id": "ffSHHdEYAn",
-      "content": "بسیار عالی",
-      "articleId": "art2",
-      "author": "مهسا",
-      "userId": "kvLLb020d6",
-      "createdAt": "2026-07-01T12:11:12.624Z"
-    },
-    {
-      "id": "x41wX2VPjm",
-      "content": "a",
-      "articleId": "art1",
-      "author": "alireza",
-      "userId": "iJBUGwRnmj",
-      "createdAt": "2026-07-04T07:50:23.906Z"
-    },
-    {
-      "id": "lQjQ_4KoJQ",
-      "content": "a",
-      "articleId": "art1",
-      "author": "alireza",
-      "userId": "iJBUGwRnmj",
-      "createdAt": "2026-07-04T07:50:25.691Z"
     }
   ],
   "users": [
@@ -164,7 +116,7 @@
       "username": "مهسا",
       "email": "mahsa@gmail.com",
       "password": "$2b$10$rrnpbQ6BzenCvO/I1ahkc.Z7L.TxXK6jmZauJAxHABw5sQlA3ToqG",
-      "role": "admin",
+      "role": "user",
       "createdAt": "2026-07-04T09:28:23.314Z"
     }
   ]

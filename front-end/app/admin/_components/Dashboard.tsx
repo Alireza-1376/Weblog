@@ -49,14 +49,14 @@ export default async function DashboardPage() {
         <main className="p-4 overflow-x-hidden  w-screen md:w-auto h-[calc(100vh-67.2px)] md:col-span-8 lg:col-span-9 xl:col-span-10">
             <div className="mx-auto max-w-7xl space-y-6">
                 {/* Stats */}
-                <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                <section className="grid  gap-4 sm:grid-cols-2 xl:grid-cols-3">
                     {stats.map((item) => {
                         const Icon = item.icon;
 
                         return (
                             <div
                                 key={item.title}
-                                className="group rounded-3xl border border-slate-400 p-6 transition-all"
+                                className="group bg-white rounded-3xl border border-slate-400 p-6 transition-all"
                             >
                                 <div className="flex items-center justify-between">
                                     <div>
@@ -84,7 +84,7 @@ export default async function DashboardPage() {
                 {/* Content */}
                 <section className="grid gap-6 lg:grid-cols-3">
                     {/* Recent Posts */}
-                    <div className="p-2 lg:col-span-2 rounded-3xl border border-slate-400">
+                    <div className="p-2 bg-white lg:col-span-2 rounded-3xl border border-slate-400">
                         <div className=" h-115 p-2 scrollbar-thin overflow-auto">
                             <div className="mb-6 flex items-center gap-2">
                                 <HiOutlineDocumentText
@@ -126,7 +126,7 @@ export default async function DashboardPage() {
                         </div>
                     </div>
                     {/* {comments} */}
-                    <div className="rounded-3xl border border-slate-400 p-2">
+                    <div className="rounded-3xl bg-white border border-slate-400 p-2">
                         <div className="p-2 h-115 scrollbar-thin overflow-auto">
                             <div className="mb-6 flex items-center gap-2">
                                 <HiOutlineChatBubbleLeftRight

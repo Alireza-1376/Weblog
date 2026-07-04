@@ -5,40 +5,65 @@ import Link from 'next/link';
 function Popular({ popularArticles }: { popularArticles: Blog[] }) {
     return (
         <section className="mt-20">
-            <h2 className="text-2xl font-bold mb-8">
-                مقالات پربازدید
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div className="mb-8 flex items-center justify-between">
+                <div>
+                    <h2 className="text-2xl font-bold text-slate-800">
+                        مقالات پربازدید
+                    </h2>
+
+                    <p className="mt-2 text-sm text-slate-500">
+                        محبوب‌ترین مقالات وبلاگ را مطالعه کنید
+                    </p>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {popularArticles.map((item) => (
                     <Link
                         key={item.id}
                         href={`/article/${item.id}`}
-                        className="border rounded-xl overflow-hidden hover:shadow-lg transition"
+                        className="group overflow-hidden rounded-2xl border border-slate-300 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                     >
-                        <div className="relative h-48">
-                            {item.image &&
+                        {/* Image */}
+                        <div className="relative h-56 overflow-hidden">
+                            {item.image && (
                                 <Image
                                     src={`http://localhost:4004${item.image}`}
                                     alt={item.title}
                                     fill
                                     unoptimized
-                                    className="object-cover"
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
-                            }
+                            )}
                         </div>
 
-                        <div className="p-4">
-                            <h3 className="font-bold line-clamp-2">
+                        {/* Content */}
+                        <div className="p-5">
+                            <h3 className="mb-3 line-clamp-2 text-lg font-bold text-slate-800 transition-colors group-hover:text-teal-600">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-600 mb-4 line-clamp-2">
+
+                            <p className="mb-5 line-clamp-3 text-sm leading-7 text-slate-500">
                                 {item.content}
                             </p>
-                            <div className="flex items-center justify-between pb-4">
+
+                            {/* Footer */}
+                            <div className="flex items-center justify-between border-t border-slate-100 pt-4">
                                 <div>
-                                    <p className="text-sm text-gray-500">{item.author}</p>
+                                    <p className="text-sm font-medium text-slate-700">
+                                        {item.author}
+                                    </p>
+
+                                    <p className="mt-1 text-xs text-slate-400">
+                                        نویسنده مقاله
+                                    </p>
                                 </div>
-                                <div>{new Date(item.createdAt).toLocaleDateString('fa-IR')}</div>
+
+                                <div className="rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-700">
+                                    {new Date(item.createdAt).toLocaleDateString(
+                                        "fa-IR"
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </Link>
