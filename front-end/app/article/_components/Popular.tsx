@@ -7,11 +7,11 @@ function Popular({ popularArticles }: { popularArticles: Blog[] }) {
         <section className="mt-20">
             <div className="mb-8 flex items-center justify-between">
                 <div>
-                    <h2 className="text-2xl font-bold text-slate-800">
+                    <h2 className="text-2xl font-bold text-slate-800 dark:text-white">
                         مقالات پربازدید
                     </h2>
 
-                    <p className="mt-2 text-sm text-slate-500">
+                    <p className="mt-2 text-sm text-slate-500 dark:text-slate-100">
                         محبوب‌ترین مقالات وبلاگ را مطالعه کنید
                     </p>
                 </div>
@@ -22,7 +22,7 @@ function Popular({ popularArticles }: { popularArticles: Blog[] }) {
                     <Link
                         key={item.id}
                         href={`/article/${item.id}`}
-                        className="group overflow-hidden rounded-2xl border border-slate-300 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                        className="group overflow-hidden rounded-2xl border border-slate-300 dark:bg-slate-500 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                     >
                         {/* Image */}
                         <div className="relative h-56 overflow-hidden">
@@ -39,22 +39,22 @@ function Popular({ popularArticles }: { popularArticles: Blog[] }) {
 
                         {/* Content */}
                         <div className="p-5">
-                            <h3 className="mb-3 line-clamp-2 text-lg font-bold text-slate-800 transition-colors group-hover:text-teal-600">
+                            <h3 className="mb-3 line-clamp-2 text-lg font-bold dark:text-white text-slate-800 transition-colors group-hover:text-teal-600 dark:group-hover:text-white">
                                 {item.title}
                             </h3>
 
-                            <p className="mb-5 line-clamp-3 text-sm leading-7 text-slate-500">
+                            <p className="mb-5 line-clamp-3 text-sm leading-7 dark:text-white text-slate-500">
                                 {item.content}
                             </p>
 
                             {/* Footer */}
                             <div className="flex items-center justify-between border-t border-slate-100 pt-4">
                                 <div>
-                                    <p className="text-sm font-medium text-slate-700">
+                                    <p className="text-sm font-medium text-slate-700 dark:text-white">
                                         {item.author}
                                     </p>
 
-                                    <p className="mt-1 text-xs text-slate-400">
+                                    <p className="mt-1 text-xs text-slate-400 dark:text-white">
                                         نویسنده مقاله
                                     </p>
                                 </div>

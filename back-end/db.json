@@ -100,6 +100,22 @@
       "articleId": "art3",
       "author": "حسین محمودی",
       "createdAt": "2023-03-11T10:45:00.000Z"
+    },
+    {
+      "id": "KEfkvWfau-",
+      "content": "خیلی عالی بود ، ممنون",
+      "articleId": "art1",
+      "author": "علیرضا",
+      "userId": "-9tF9oF03y",
+      "createdAt": "2026-07-05T08:27:00.207Z"
+    },
+    {
+      "id": "oS-RYtqyzJ",
+      "content": "سلام ، لذت بردم",
+      "articleId": "art1",
+      "author": "ابوالفضل",
+      "userId": "ARENWh3xgh",
+      "createdAt": "2026-07-05T08:28:35.344Z"
     }
   ],
   "users": [
@@ -112,12 +128,20 @@
       "createdAt": "2026-07-04T08:30:37.041Z"
     },
     {
-      "id": "h3YpMt6bBX",
+      "id": "ARENWh3xgh",
+      "username": "ابوالفضل",
+      "email": "Abolfazl@gmail.com",
+      "password": "$2b$10$mhBTyuSmfjTDwqz1EoIdPe8vNSa4XKAmqZuVZZotIq1Juuv7OeRua",
+      "role": "admin",
+      "createdAt": "2026-07-05T07:25:21.784Z"
+    },
+    {
+      "id": "YHz48aQcIM",
       "username": "مهسا",
       "email": "mahsa@gmail.com",
-      "password": "$2b$10$rrnpbQ6BzenCvO/I1ahkc.Z7L.TxXK6jmZauJAxHABw5sQlA3ToqG",
+      "password": "$2b$10$TAUX3jiRgj8Fyz0m9TVsLe6Hrg94KHZQD/zproqAeKsjewnD3Dtu2",
       "role": "user",
-      "createdAt": "2026-07-04T09:28:23.314Z"
+      "createdAt": "2026-07-05T08:29:34.422Z"
     }
   ]
 }

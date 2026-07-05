@@ -25,7 +25,7 @@ const stats = [
 
 function States() {
     return (
-        <section className="bg-teal-700 py-10">
+        <section className="bg-teal-700 dark:bg-slate-600 py-10">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {stats.map((item, index) => (

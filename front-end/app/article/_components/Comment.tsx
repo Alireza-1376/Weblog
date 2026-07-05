@@ -36,16 +36,16 @@ async function Comment({ comments, articleId }: { comments: CommentType[], artic
 
                     <div
                         key={comment.id}
-                        className="rounded-2xl border border-slate-300 bg-white p-5 shadow-sm transition-all hover:shadow-md"
+                        className="rounded-2xl border border-slate-300 bg-white dark:bg-slate-500 p-5 shadow-sm transition-all hover:shadow-md"
                     >
                         {/* Header */}
                         <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                             <div>
-                                <h4 className="font-bold text-slate-800">
+                                <h4 className="font-bold text-slate-800 dark:text-white">
                                     {comment.author}
                                 </h4>
 
-                                <span className="text-xs text-slate-500">
+                                <span className="text-xs text-slate-500 dark:text-white">
                                     {new Date(comment.createdAt).toLocaleDateString("fa-IR")}
                                 </span>
                             </div>
@@ -59,7 +59,7 @@ async function Comment({ comments, articleId }: { comments: CommentType[], artic
                         </div>
 
                         {/* Content */}
-                        <p className="leading-8 text-slate-600">
+                        <p className="leading-8 text-slate-600 dark:text-white">
                             {comment.content}
                         </p>
                     </div>

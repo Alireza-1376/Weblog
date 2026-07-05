@@ -17,18 +17,18 @@ function Content({ selectArticle }: { selectArticle: Blog }) {
                 }
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold mt-8 mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold mt-8 mb-6 dark:text-white">
                 {selectArticle.title}
             </h1>
 
-            <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8">
+            <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-white mb-8">
                 <span>{selectArticle.author}</span>
 
                 <span>
                     {new Date(selectArticle.createdAt).toLocaleDateString("fa-IR")}
                 </span>
             </div>
-            <div className="leading-9 text-gray-700 whitespace-pre-wrap">
+            <div className="leading-9 text-gray-700 whitespace-pre-wrap dark:text-white">
                 {selectArticle.content}
             </div>
         </>

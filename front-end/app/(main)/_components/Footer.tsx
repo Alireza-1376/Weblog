@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone,
 
 function Footer() {
     return (
-        <footer className="bg-gray-900 text-white mt-20">
+        <footer className="bg-gray-900 dark:bg-slate-700 text-white mt-20">
 
             <div className="max-w-7xl mx-auto px-4 py-16">
 

@@ -7,11 +7,11 @@ function Categories({ allCategories }: { allCategories: CategoriesType[] }) {
         <section className="mx-auto max-w-7xl px-4 py-16">
             {/* Header */}
             <div className="mb-10">
-                <h2 className="text-3xl font-extrabold text-slate-800">
+                <h2 className="text-3xl font-extrabold text-slate-800 dark:text-white">
                     دسته‌بندی مقالات
                 </h2>
 
-                <p className="mt-3 text-slate-500">
+                <p className="mt-3 text-slate-500 dark:text-slate-200">
                     موضوع مورد علاقه خود را انتخاب کنید و مقالات مرتبط را مطالعه کنید.
                 </p>
             </div>
@@ -22,15 +22,15 @@ function Categories({ allCategories }: { allCategories: CategoriesType[] }) {
                     <Link
                         key={category.id}
                         href={`/category/${category.id}?title=${category.title}`}
-                        className="group rounded-3xl border border-slate-300 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg"
+                        className="group rounded-3xl border border-slate-300 dark:bg-slate-500 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg"
                     >
                         {/* Title */}
-                        <h3 className="mb-4 text-xl font-bold text-slate-800 transition-colors group-hover:text-teal-600">
+                        <h3 className="mb-4 text-xl font-bold text-slate-800 dark:text-white dark:group-hover:text-slate-100 transition-colors group-hover:text-teal-600">
                             {category.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="line-clamp-3 leading-8 text-slate-600">
+                        <p className="line-clamp-3 leading-8 text-slate-600 dark:text-white dark:group-hover:text-slate-100">
                             {category.description}
                         </p>
 
@@ -40,7 +40,7 @@ function Categories({ allCategories }: { allCategories: CategoriesType[] }) {
                                 مشاهده مقالات
                             </span>
 
-                            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-teal-600 transition-all duration-300 group-hover:bg-teal-600 group-hover:text-white">
+                            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-teal-600 transition-all duration-300 group-hover:bg-teal-600 dark:group-hover:bg-slate-600 group-hover:text-white">
                                 <FaArrowLeft size={14} />
                             </span>
                         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ToastContainer } from 'react-toastify';
-import SidebarProvider from "@/context/ShowSidebar";
+import ThemeProvider from "./(main)/_components/ThemeProvider";
+
 
 
 export const metadata: Metadata = {
@@ -16,12 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="min-h-full flex flex-col bg-gray-100">
-        <ToastContainer />
-        <SidebarProvider>
-          {children}
-        </SidebarProvider>
-      </body>
+      <ThemeProvider>
+        {children}
+      </ThemeProvider>
     </html>
   );
 }
