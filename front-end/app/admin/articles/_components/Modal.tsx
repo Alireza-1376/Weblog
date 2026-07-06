@@ -58,53 +58,63 @@ export default function Modal() {
     }
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
-            <div className="w-full max-w-4xl rounded-3xl bg-white shadow-2xl dark:bg-zinc-900">
+
+            <div className="w-full max-w-4xl rounded-3xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 shadow-2xl">
+
                 {/* Header */}
-                <div className="flex items-center justify-between border-b border-zinc-200 p-6 dark:border-zinc-800">
-                    <h2 className="text-xl font-bold">
+                <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-600 p-6">
+
+                    <h2 className="text-xl font-bold text-slate-800 dark:text-white">
                         {search ? "ویرایش مقاله" : "ایجاد مقاله جدید"}
                     </h2>
 
                     <button
-                        onClick={() => { router.back() }}
-                        className="rounded-lg cursor-pointer p-2 transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                        onClick={() => router.back()}
+                        className="cursor-pointer rounded-xl p-2 text-slate-700 dark:text-white transition hover:bg-slate-100 dark:hover:bg-slate-600"
                     >
                         ✕
                     </button>
+
                 </div>
 
                 <form action={action} className="max-h-[85vh] overflow-y-auto p-6">
+
                     <div className="grid gap-6 lg:grid-cols-2">
+
                         {/* Right Side */}
                         <div className="space-y-5">
+
                             <div>
-                                <label className="mb-2 block text-sm font-medium">
+
+                                <label className="mb-2 block text-sm font-medium text-slate-700 dark:text-white">
                                     عنوان مقاله
                                 </label>
 
                                 <input
-                                    onChange={(e) => { setTitle(e.target.value) }}
                                     value={title}
+                                    onChange={(e) => setTitle(e.target.value)}
                                     name="title"
                                     type="text"
                                     required
                                     placeholder="عنوان مقاله را وارد کنید"
-                                    className="w-full rounded-xl border border-zinc-300 px-4 py-3 outline-none transition focus:border-teal-500 dark:border-zinc-700 dark:bg-zinc-800"
+                                    className="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white outline-none transition focus:border-slate-600"
                                 />
+
                             </div>
 
                             <div>
-                                <label className="mb-2 block text-sm font-medium">
+
+                                <label className="mb-2 block text-sm font-medium text-slate-700 dark:text-white">
                                     دسته‌بندی
                                 </label>
 
                                 <select
-                                    onChange={(e) => { setCategory(e.target.value) }}
                                     value={category}
+                                    onChange={(e) => setCategory(e.target.value)}
                                     name="categoryId"
                                     title="دسته بندی"
                                     required
-                                    className="w-full rounded-xl border border-zinc-300 px-4 py-3 outline-none transition focus:border-teal-500 dark:border-zinc-700 dark:bg-zinc-800"
+                                    className="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-white outline-none transition focus:border-slate-600"
                                 >
                                     <option value="">
                                         انتخاب دسته‌بندی
@@ -118,101 +128,126 @@ export default function Modal() {
                                             {category.title}
                                         </option>
                                     ))}
+
                                 </select>
+
                             </div>
 
                             <div>
-                                <label className="mb-2 block text-sm font-medium">
+
+                                <label className="mb-2 block text-sm font-medium text-slate-700 dark:text-white">
                                     محتوای مقاله
                                 </label>
 
                                 <textarea
-                                    onChange={(e) => { setContent(e.target.value) }}
                                     value={content}
+                                    onChange={(e) => setContent(e.target.value)}
                                     name="content"
-                                    required
                                     rows={6}
+                                    required
                                     placeholder="متن مقاله..."
-                                    className="w-full resize-none rounded-xl border border-zinc-300 p-4 outline-none transition focus:border-teal-500 dark:border-zinc-700 dark:bg-zinc-800"
+                                    className="w-full resize-none rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 p-4 text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white outline-none transition focus:border-slate-600"
                                 />
+
                             </div>
+
                         </div>
+
                         {/* Left Side */}
                         <div>
-                            <label className="mb-2 block text-sm font-medium">
+
+                            <label className="mb-2 block text-sm font-medium text-slate-700 dark:text-white">
                                 تصویر مقاله
                             </label>
 
-                            <label className="flex h-72 cursor-pointer items-center justify-center rounded-2xl border-2 border-dashed border-zinc-300 transition hover:border-teal-500 dark:border-zinc-700">
+                            <label className="flex h-72 cursor-pointer items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800 transition hover:border-slate-600">
+
                                 <input
+                                    hidden
                                     name="image"
                                     type="file"
                                     accept="image/*"
-                                    hidden
-                                    onChange={(e) => { handleImage(e) }}
+                                    onChange={(e) => handleImage(e)}
                                 />
 
-                                {preview ?
+                                {preview ? (
+
                                     <div className="relative h-full w-full overflow-hidden rounded-2xl">
-                                        {preview &&
-                                            <Image
-                                                src={preview}
-                                                alt="preview"
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        }
+
+                                        <Image
+                                            src={preview}
+                                            alt="preview"
+                                            fill
+                                            className="object-cover"
+                                        />
+
                                     </div>
 
-                                    :
-                                    <div className="text-center">
+                                ) : (
+
+                                    <div className="text-center text-slate-700 dark:text-white">
+
                                         <div className="mb-2 text-4xl">
                                             📷
                                         </div>
+
                                         <p className="font-medium">
                                             انتخاب تصویر
                                         </p>
+
                                     </div>
 
-                                }
-
-
-
+                                )}
 
                             </label>
+
                         </div>
+
                     </div>
 
                     {/* Footer */}
+                    <div className="mt-8 flex flex-col-reverse gap-3 border-t border-slate-200 dark:border-slate-600 pt-6 sm:flex-row sm:justify-end">
 
-
-                    <div className="mt-8 flex flex-col-reverse gap-3 border-t border-zinc-200 pt-6 sm:flex-row sm:justify-end dark:border-zinc-800">
                         <button
-                            onClick={() => { router.back() }}
+                            onClick={() => router.back()}
                             type="button"
-                            className="rounded-xl cursor-pointer border border-zinc-300 px-6 py-3 transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+                            className="cursor-pointer rounded-xl border border-slate-300 dark:border-slate-600 px-6 py-3 text-slate-700 dark:text-white transition hover:bg-slate-100 dark:hover:bg-slate-800"
                         >
                             انصراف
                         </button>
 
-                        {pending ?
-                            <div className="bg-teal-700/50 flex items-center justify-center w-32 text-white px-6 py-3 rounded-lg hover:bg-teal-800 transition">
+                        {pending ? (
+
+                            <div className="flex w-32 items-center justify-center rounded-xl bg-slate-600 px-6 py-3 text-white">
                                 <FaSpinner className="animate-spin" />
                             </div>
-                            :
+
+                        ) : (
+
                             <button
                                 type="submit"
-                                className="rounded-xl cursor-pointer bg-teal-600 px-6 py-3 font-medium text-white transition hover:bg-teal-700"
+                                className="cursor-pointer rounded-xl bg-teal-600 dark:bg-slate-600 px-6 py-3 font-medium text-white transition hover:bg-teal-700 dark:hover:bg-slate-800"
                             >
-                                {search ? "ثبت تغییرات" : " ایجاد مقاله"}
+                                {search ? "ثبت تغییرات" : "ایجاد مقاله"}
                             </button>
-                        }
-                    </div>
-                    {search && <input name="articleId" type="hidden" value={search} />}
 
+                        )}
+
+                    </div>
+
+                    {search && (
+                        <input
+                            name="articleId"
+                            type="hidden"
+                            value={search}
+                        />
+                    )}
 
                 </form>
+
             </div>
+
         </div>
+
     );
 }

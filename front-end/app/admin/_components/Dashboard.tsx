@@ -46,120 +46,188 @@ export default async function DashboardPage() {
     ];
 
     return (
-        <main className="p-4 overflow-x-hidden  w-screen md:w-auto h-[calc(100vh-67.2px)] md:col-span-8 lg:col-span-9 xl:col-span-10">
+        <main className="p-4 overflow-x-hidden w-screen md:w-auto h-[calc(100vh-67.2px)] md:col-span-8 lg:col-span-9 xl:col-span-10 bg-slate-100 dark:bg-slate-800">
+
             <div className="mx-auto max-w-7xl space-y-6">
+
                 {/* Stats */}
-                <section className="grid  gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+
                     {stats.map((item) => {
                         const Icon = item.icon;
 
                         return (
                             <div
                                 key={item.title}
-                                className="group bg-white rounded-3xl border border-slate-400 p-6 transition-all"
+                                className="
+                            rounded-3xl
+                            border border-slate-200 dark:border-slate-600
+                            bg-white dark:bg-slate-700
+                            p-6
+                            shadow-sm
+                            transition-all
+                        "
                             >
                                 <div className="flex items-center justify-between">
+
                                     <div>
-                                        <p className="text-slate-400">
+                                        <p className="text-slate-500 dark:text-white">
                                             {item.title}
                                         </p>
 
-                                        <h2 className="mt-3 text-3xl font-bold">
+                                        <h2 className="mt-3 text-3xl font-bold text-slate-800 dark:text-white">
                                             {item.value}
                                         </h2>
                                     </div>
 
-                                    <div className="rounded-2xl bg-blue-500/10 p-4">
+                                    <div className="rounded-2xl bg-slate-100 dark:bg-slate-600 p-4">
                                         <Icon
                                             size={28}
-                                            className="text-blue-400"
+                                            className="text-slate-700 dark:text-white"
                                         />
                                     </div>
+
                                 </div>
                             </div>
                         );
                     })}
+
                 </section>
 
                 {/* Content */}
                 <section className="grid gap-6 lg:grid-cols-3">
-                    {/* Recent Posts */}
-                    <div className="p-2 bg-white lg:col-span-2 rounded-3xl border border-slate-400">
-                        <div className=" h-115 p-2 scrollbar-thin overflow-auto">
-                            <div className="mb-6 flex items-center gap-2">
-                                <HiOutlineDocumentText
-                                    size={22}
-                                    className="text-blue-400"
-                                />
 
-                                <h3 className="text-lg font-semibold">
+                    {/* Recent Articles */}
+                    <div className="lg:col-span-2 rounded-3xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 p-2 shadow-sm">
+                        <div className="h-115 overflow-auto scrollbar-thin p-4">
+
+                            <div className="mb-6 flex items-center gap-2">
+
+                                <div className="rounded-xl bg-slate-100 dark:bg-slate-600 p-2">
+                                    <HiOutlineDocumentText
+                                        size={20}
+                                        className="text-slate-700 dark:text-white"
+                                    />
+                                </div>
+
+                                <h3 className="text-lg font-semibold text-slate-800 dark:text-white">
                                     مقالات اخیر
                                 </h3>
+
                             </div>
 
                             <div className="space-y-4">
+
                                 {filterArticle.map((art) => (
                                     <div
                                         key={art.id}
-                                        className="flex items-center justify-between rounded-2xl border border-slate-400 p-4"
+                                        className="
+                                    flex items-center justify-between
+                                    rounded-2xl
+                                    border border-slate-200 dark:border-slate-600
+                                    bg-slate-50 dark:bg-slate-800
+                                    p-4
+                                "
                                     >
                                         <div>
-                                            <h4 className="font-medium">
+
+                                            <h4 className="font-medium text-slate-800 dark:text-white">
                                                 {art.title}
                                             </h4>
 
-                                            <span className="mt-2 block text-sm text-slate-500">
-                                                {new Date(art.createdAt).toLocaleString("fa-IR", {
-                                                    year: "numeric",
-                                                    month: "2-digit",
-                                                    day: "2-digit"
-                                                })}
+                                            <span className="mt-2 block text-sm text-slate-500 dark:text-white">
+                                                {new Date(art.createdAt).toLocaleString(
+                                                    "fa-IR",
+                                                    {
+                                                        year: "numeric",
+                                                        month: "2-digit",
+                                                        day: "2-digit",
+                                                    }
+                                                )}
                                             </span>
+
                                         </div>
 
-                                        <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-400">
+                                        <span
+                                            className="
+                                        rounded-full
+                                        bg-slate-200 dark:bg-slate-600
+                                        px-3 py-1
+                                        text-xs
+                                        text-slate-700 dark:text-white
+                                    "
+                                        >
                                             منتشر شده
                                         </span>
+
                                     </div>
                                 ))}
+
                             </div>
+
                         </div>
                     </div>
-                    {/* {comments} */}
-                    <div className="rounded-3xl bg-white border border-slate-400 p-2">
-                        <div className="p-2 h-115 scrollbar-thin overflow-auto">
-                            <div className="mb-6 flex items-center gap-2">
-                                <HiOutlineChatBubbleLeftRight
-                                    size={22}
-                                    className="text-blue-400"
-                                />
 
-                                <h3 className="text-lg font-semibold">
+                    {/* Comments */}
+                    <div
+                        className="
+                    rounded-3xl
+                    border border-slate-200 dark:border-slate-600
+                    bg-white dark:bg-slate-700
+                    p-2
+                    shadow-sm
+                "
+                    >
+                        <div className="h-115 overflow-auto scrollbar-thin p-4">
+
+                            <div className="mb-6 flex items-center gap-2">
+
+                                <div className="rounded-xl bg-slate-100 dark:bg-slate-600 p-2">
+                                    <HiOutlineChatBubbleLeftRight
+                                        size={20}
+                                        className="text-slate-700 dark:text-white"
+                                    />
+                                </div>
+
+                                <h3 className="text-lg font-semibold text-slate-800 dark:text-white">
                                     آخرین نظرات
                                 </h3>
+
                             </div>
 
-                            <div className="space-y-4 ">
+                            <div className="space-y-4">
+
                                 {filterComments.map((comment) => (
                                     <div
                                         key={comment.id}
-                                        className="rounded-2xl border border-slate-400 p-4"
+                                        className="
+                                    rounded-2xl
+                                    border border-slate-200 dark:border-slate-600
+                                    bg-slate-50 dark:bg-slate-800
+                                    p-4
+                                "
                                     >
-                                        <p className="font-medium">
+                                        <p className="font-medium text-slate-800 dark:text-white">
                                             {comment.author}
                                         </p>
 
-                                        <p className="mt-2 text-sm text-slate-400">
+                                        <p className="mt-2 text-sm text-slate-500 dark:text-white">
                                             {comment.content}
                                         </p>
                                     </div>
                                 ))}
+
                             </div>
+
                         </div>
                     </div>
+
                 </section>
 
             </div>
+
         </main>
+
+
     );
 }

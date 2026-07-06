@@ -71,9 +71,9 @@ function Navbar() {
 
                 {showMenu && <div onClick={() => { setShowMenu(false) }} className="bg-black/30 fixed inset-0 z-20"></div>}
 
-                <nav className={`${showMenu ? "w-52" : "w-0 translate-x-10 overflow-hidden"} transition p-4 md:p-0 flex flex-col items-start fixed z-30 top-0 bottom-0 shadow-2xl  md:w-fit right-0 h-screen bg-inherit md:static md:flex-row md:h-full md:shadow-none md:items-center gap-6 lg:gap-8`}>
+                <nav className={`${showMenu ? "w-52 dark:bg-slate-700 bg-white" : "w-0 translate-x-10 overflow-hidden dark:bg-slate-700 bg-white"} transition p-4 md:p-0 flex flex-col items-start fixed z-30 top-0 bottom-0 shadow-2xl  md:w-fit right-0 h-screen bg-inherit md:static md:flex-row md:h-full md:shadow-none md:items-center gap-6 lg:gap-8`}>
                     <div className="flex justify-between w-full md:hidden border-b border-gray-200 pb-4">
-                        <h2 className="text-teal-700 text-xl font-bold">منو اصلی</h2>
+                        <h2 className="text-teal-700 dark:text-white text-xl font-bold">منو اصلی</h2>
                         <CgClose onClick={() => { setShowMenu(false) }} size={24} className="cursor-pointer" />
                     </div>
 
@@ -112,7 +112,7 @@ function Navbar() {
                         <div ref={ref} className="relative ">
                             <div
                                 onClick={() => { setDropdown(!dropdown) }}
-                                className="dark:bg-slate-700 dark:text-white cursor-pointer group relative overflow-hidden flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-teal-600 text-teal-700 font-semibold transition-all duration-300 hover:text-white"
+                                className="dark:bg-slate-700 dark:text-white cursor-pointer group relative overflow-hidden flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border dark:border-gray-300 border-teal-600 text-teal-700 font-semibold transition-all duration-300 hover:text-white"
                             >
                                 <p className="absolute inset-0 w-0 bg-teal-700 dark:bg-slate-600 transition-all duration-300 group-hover:w-full"></p>
                                 <FaUser className="relative z-10" />
@@ -149,9 +149,9 @@ function Navbar() {
                         :
                         <Link
                             href="/auth/login"
-                            className="cursor-pointer group relative overflow-hidden flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-teal-600 text-teal-700 font-semibold transition-all duration-300 hover:text-white"
+                            className="cursor-pointer group relative overflow-hidden flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border dark:text-slate-700 dark:border-gray-300 border-teal-600 text-teal-700 font-semibold transition-all duration-300 hover:text-white"
                         >
-                            <span className="absolute inset-0 w-0 bg-teal-700 transition-all duration-300 group-hover:w-full"></span>
+                            <span className="absolute inset-0 w-0 dark:bg-slate-700 bg-teal-700 transition-all duration-300 group-hover:w-full"></span>
                             <FaUser className="relative z-10" />
                             <span className="relative z-10 flex items-center gap-2">
                                 ورود

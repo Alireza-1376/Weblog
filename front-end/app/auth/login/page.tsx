@@ -40,12 +40,13 @@ export default function LoginPage() {
             initialValues={initialValue}
             validationSchema={validationSchema}
         >
-            <main className="h-screen w-screen bg-linear-to-br  from-teal-600 to-teal-600 flex items-center justify-center p-4">
+
+            <main className="h-screen w-screen bg-linear-to-br from-teal-600 to-teal-600 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center p-4">
                 <div className="w-full max-w-md">
-                    <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl p-8">
+                    <div className="rounded-3xl border border-white/20 dark:border-slate-600 bg-white/10 dark:bg-slate-800 backdrop-blur-xl shadow-2xl p-8">
                         {/* Header */}
                         <div className="text-center mb-8">
-                            <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/20">
+                            <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/20 dark:bg-slate-700">
                                 <svg
                                     className="w-10 h-10 text-white"
                                     fill="none"
@@ -65,7 +66,7 @@ export default function LoginPage() {
                                 ورود به حساب
                             </h1>
 
-                            <p className="mt-2 text-white/80">
+                            <p className="mt-2 text-white/80 dark:text-white">
                                 اطلاعات خود را وارد کنید
                             </p>
                         </div>
@@ -80,13 +81,16 @@ export default function LoginPage() {
                                 <Field
                                     type="text"
                                     placeholder="نام کاربری"
-                                    name='username'
-                                    className="w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none transition focus:border-white/40 focus:ring-2 focus:ring-white/40"
+                                    name="username"
+                                    className="w-full rounded-xl border border-white/20 dark:border-slate-600 bg-white/20 dark:bg-slate-700 px-4 py-3 text-white placeholder:text-white/60 dark:placeholder:text-white outline-none transition focus:border-white/40 dark:focus:border-slate-600 focus:ring-2 focus:ring-white/40 dark:focus:ring-slate-600"
                                 />
+
                                 <ErrorMessage name="username">
-                                    {(props) => {
-                                        return <p className='text-sm text-red-700 pt-1'>{props}</p>
-                                    }}
+                                    {(props) => (
+                                        <p className="pt-1 text-sm text-white">
+                                            {props}
+                                        </p>
+                                    )}
                                 </ErrorMessage>
                             </div>
 
@@ -97,29 +101,33 @@ export default function LoginPage() {
 
                                 <div className="relative">
                                     <Field
-                                        type={showPassword ? 'text' : 'password'}
+                                        type={showPassword ? "text" : "password"}
                                         placeholder="رمز عبور"
                                         name="password"
-                                        className="w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none transition focus:border-white/40 focus:ring-2 focus:ring-white/40"
+                                        className="w-full rounded-xl border border-white/20 dark:border-slate-600 bg-white/20 dark:bg-slate-700 px-4 py-3 text-white placeholder:text-white/60 dark:placeholder:text-white outline-none transition focus:border-white/40 dark:focus:border-slate-600 focus:ring-2 focus:ring-white/40 dark:focus:ring-slate-600"
                                     />
+
                                     <ErrorMessage name="password">
-                                        {(props) => {
-                                            return <p className='text-sm text-red-700 pt-1'>{props}</p>
-                                        }}
+                                        {(props) => (
+                                            <p className="pt-1 text-sm text-white">
+                                                {props}
+                                            </p>
+                                        )}
                                     </ErrorMessage>
+
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
                                         className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white"
                                     >
-                                        {showPassword ? '🙈' : '👁️'}
+                                        {showPassword ? "🙈" : "👁️"}
                                     </button>
                                 </div>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full cursor-pointer rounded-xl bg-white py-3 font-semibold text-purple-700 transition hover:scale-[1.02] hover:bg-slate-100 active:scale-[0.98]"
+                                className="w-full cursor-pointer rounded-xl bg-white dark:bg-slate-600 py-3 font-semibold text-slate-800 dark:text-white transition hover:scale-[1.02] hover:bg-slate-100 dark:hover:bg-slate-700 active:scale-[0.98]"
                             >
                                 ورود
                             </button>
@@ -128,10 +136,10 @@ export default function LoginPage() {
                         {/* Register Link */}
                         <div className="mt-6 flex flex-col gap-3 text-center">
                             <div className="text-white">
-                                حساب کاربری ندارید؟{' '}
+                                حساب کاربری ندارید؟{" "}
                                 <Link
                                     href="/auth/register"
-                                    className="font-bold text-yellow-300 transition hover:text-yellow-200"
+                                    className="font-bold text-white transition hover:text-slate-600"
                                 >
                                     ثبت نام
                                 </Link>
@@ -139,7 +147,7 @@ export default function LoginPage() {
 
                             <Link
                                 href="/"
-                                className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white transition hover:bg-white/20"
+                                className="inline-flex items-center justify-center rounded-xl border border-white/20 dark:border-slate-600 bg-white/10 dark:bg-slate-700 px-4 py-3 text-white transition hover:bg-white/20 dark:hover:bg-slate-600"
                             >
                                 ← بازگشت به صفحه اصلی
                             </Link>
@@ -147,6 +155,8 @@ export default function LoginPage() {
                     </div>
                 </div>
             </main>
+
+
         </Formik>
     );
 }

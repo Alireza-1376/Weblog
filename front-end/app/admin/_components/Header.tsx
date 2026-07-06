@@ -24,7 +24,7 @@ function Header() {
                 <p className="text-sky-500 border-2 rounded-full p-1">
                     <HiOutlineUser size={24} />
                 </p>
-                <Link href="/" className='border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-6 py-1 rounded-md'>خروج</Link>
+                <Link href="/" className='border-2 dark:text-white dark:border-white dark:hover:bg-slate-700 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-6 py-1 rounded-md'>خروج</Link>
             </div>
         </div>
     )
