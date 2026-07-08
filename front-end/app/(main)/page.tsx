@@ -13,13 +13,25 @@ export default async function Home() {
     getAllCategories()
   ])
 
+  const sortArticles = [...allArticles].sort((a, b) => {
+    const dateA = new Date(a.createdAt)
+    const dateB = new Date(b.createdAt)
+    if (dateA > dateB) {
+      return -1
+    }
+    if (dateB > dateA) {
+      return 1
+    }
+    return -1
+  })
+
 
   return (
     <main>
       <Banner />
       <States />
       <Categories allCategories={allCategories} />
-      <Articles allArticles={allArticles} />
+      <Articles allArticles={sortArticles} />
     </main>
   );
 }

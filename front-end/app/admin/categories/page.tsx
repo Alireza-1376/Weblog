@@ -2,6 +2,7 @@ import { getAllCategories } from "@/services/categories";
 import Link from "next/link";
 import { FiPlus } from "react-icons/fi";
 import ActivityBtns from "./_components/ActivityBtns";
+import Pagination from "./_components/Pagination";
 
 
 export default async function CategoriesTable() {
@@ -37,62 +38,7 @@ export default async function CategoriesTable() {
 
                 {/* Table */}
                 <div className="overflow-x-auto">
-
-                    <table className="min-w-full">
-
-                        <thead>
-                            <tr className="border-b border-slate-200 dark:border-slate-600 text-right">
-
-                                <th className="px-4 py-4 text-center text-sm font-bold text-slate-600 dark:text-white">
-                                    #
-                                </th>
-
-                                <th className="px-4 py-4 text-center text-sm font-bold text-slate-600 dark:text-white">
-                                    عنوان دسته‌بندی
-                                </th>
-
-                                <th className="px-4 py-4 text-center text-sm font-bold text-slate-600 dark:text-white">
-                                    توضیحات
-                                </th>
-
-                                <th className="px-4 py-4 text-center text-sm font-bold text-slate-600 dark:text-white">
-                                    عملیات
-                                </th>
-
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            {categories.map((category) => (
-                                <tr
-                                    key={category.id}
-                                    className="border-b border-slate-100 dark:border-slate-600 text-center transition hover:bg-slate-50 dark:hover:bg-slate-800"
-                                >
-
-                                    <td className="px-4 py-5 text-slate-700 dark:text-white">
-                                        {category.id}
-                                    </td>
-
-                                    <td className="px-4 py-5 font-semibold text-slate-800 dark:text-white">
-                                        {category.title}
-                                    </td>
-
-                                    <td className="px-4 py-5 text-slate-500 dark:text-white">
-                                        {category.description}
-                                    </td>
-
-                                    <td className="px-4 py-5">
-                                        <ActivityBtns categoryId={category.id} />
-                                    </td>
-
-                                </tr>
-                            ))}
-
-                        </tbody>
-
-                    </table>
-
+                    <Pagination categories={categories} countPerPage={4}/>
                 </div>
 
             </div>

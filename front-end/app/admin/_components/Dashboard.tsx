@@ -22,8 +22,32 @@ export default async function DashboardPage() {
         return new Date(art.createdAt).getFullYear() >= new Date().getFullYear() - 1
     })
 
+    const sortArticles = [...filterArticle].sort((a, b) => {
+        const dateA = new Date(a.createdAt)
+        const dateB = new Date(b.createdAt)
+        if (dateA > dateB) {
+            return -1
+        }
+        if (dateB > dateA) {
+            return 1
+        }
+        return -1
+    })
+
     const filterComments = comments.filter((comments) => {
         return new Date(comments.createdAt).getFullYear() >= new Date().getFullYear() - 1
+    })
+
+    const sortComments = [...filterComments].sort((a, b) => {
+        const dateA = new Date(a.createdAt)
+        const dateB = new Date(b.createdAt)
+        if (dateA > dateB) {
+            return -1
+        }
+        if (dateB > dateA) {
+            return 1
+        }
+        return -1
     })
 
 
@@ -118,7 +142,7 @@ export default async function DashboardPage() {
 
                             <div className="space-y-4">
 
-                                {filterArticle.map((art) => (
+                                {sortArticles.map((art) => (
                                     <div
                                         key={art.id}
                                         className="
@@ -197,7 +221,7 @@ export default async function DashboardPage() {
 
                             <div className="space-y-4">
 
-                                {filterComments.map((comment) => (
+                                {sortComments.map((comment) => (
                                     <div
                                         key={comment.id}
                                         className="

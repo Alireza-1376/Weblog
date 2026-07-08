@@ -9,6 +9,18 @@ export default async function UsersTable() {
     const token = cookieStore.get('LoginToken')?.value
     const users = await getAllUsers(token);
 
+    const sortUsers = [...users].sort((a, b) => {
+        const dateA = new Date(a.createdAt)
+        const dateB = new Date(b.createdAt)
+        if (dateA > dateB) {
+            return -1
+        }
+        if (dateB > dateA) {
+            return 1
+        }
+        return -1
+    })
+
     return (
         <div className="w-screen md:w-full md:col-span-8 lg:col-span-9 xl:col-span-10 h-[calc(100vh-67.2px)] overflow-x-hidden overflow-y-auto bg-slate-100 dark:bg-slate-800 p-4">
 
@@ -74,7 +86,7 @@ export default async function UsersTable() {
 
                         <tbody>
 
-                            {users.map((user, index) => (
+                            {sortUsers.map((user, index) => (
                                 <tr
                                     key={user.id}
                                     className="border-b border-slate-100 dark:border-slate-600 transition hover:bg-slate-50 dark:hover:bg-slate-800"
