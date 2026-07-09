@@ -36,7 +36,7 @@ function Sidebar({ token }: { token: string }) {
             />
 
             {decode.role === "admin" &&
-                decode.username === "علیرضا" && (
+                (
                     <Links
                         Icon={HiUsers}
                         title="مدیریت کاربران"

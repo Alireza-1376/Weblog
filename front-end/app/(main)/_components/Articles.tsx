@@ -17,7 +17,7 @@ function Articles({ allArticles }: { allArticles: Blog[] }) {
 
             {/* Articles */}
 
-            <Pagination allArticles={allArticles} countPerPage={3} />
+            <Pagination allArticles={allArticles} countPerPage={6} />
 
         </section>
     )

@@ -5,7 +5,7 @@ import Link from "next/link";
 function Special({ specialArticles }: { specialArticles: Blog[] }) {
     return (
         <aside className="lg:col-span-1">
-            <div className="sticky top-20 rounded-2xl border border-slate-300 dark:bg-slate-500 bg-white p-5 shadow-sm">
+            <div className="sticky top-22 rounded-2xl border border-slate-300 dark:bg-slate-500 bg-white p-5 shadow-sm">
                 {/* Header */}
                 <div className="mb-6 border-b border-slate-100 pb-4">
                     <h3 className="text-xl font-bold text-slate-800 dark:text-white">

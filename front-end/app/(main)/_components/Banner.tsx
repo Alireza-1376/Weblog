@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Banner() {
     return (
-        <section className="relative h-75 md:h-112.5">
+        <section className="relative h-75 mt-20 md:h-112.5">
             <Image
                 src="/images/3.avif"
                 alt="Blog Banner"

@@ -30,7 +30,7 @@ function Footer() {
                             </li>
 
                             <li>
-                                <Link href="/articles">مقالات</Link>
+                                <Link href="/">مقالات</Link>
                             </li>
 
                             <li>

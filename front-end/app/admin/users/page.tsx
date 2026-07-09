@@ -1,8 +1,6 @@
 import { getAllUsers } from "@/services/auth";
 import UserActions from "./_components/UserActions";
 import { cookies } from "next/headers";
-import { JwtType } from "@/types/auth";
-import { jwtDecode } from "jwt-decode";
 
 export default async function UsersTable() {
     const cookieStore = await cookies();

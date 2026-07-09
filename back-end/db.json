@@ -14,6 +14,11 @@
       "id": "cat3",
       "title": "هوش مصنوعی",
       "description": "مقالات مرتبط با هوش مصنوعی و یادگیری ماشین"
+    },
+    {
+      "id": "KUk1h2uOpo",
+      "title": "دسته بندی تستی",
+      "description": "توضیحات تستی"
     }
   ],
   "articles": [
@@ -63,103 +68,13 @@
       "createdAt": "2023-03-10T09:15:00.000Z"
     },
     {
-      "id": "7S-N6vmxhE",
-      "title": "مقاله تست 1",
-      "content": "محتویات مقاله تست ",
-      "image": "/public/4.png",
-      "categoryId": "cat1",
-      "author": "قاسم بساکی",
-      "createdAt": "2025-05-21T18:28:58.587Z"
-    },
-    {
-      "id": "DV2PhO1rkc",
-      "title": "test",
-      "content": "test",
-      "image": "/public/1783353741273-67750617.jpeg",
-      "categoryId": "cat2",
-      "author": "zahra",
-      "createdAt": "2026-07-06T16:02:21.280Z"
-    },
-    {
-      "id": "uKy-JbFcsF",
-      "title": "تست 2",
-      "content": "تست 2",
-      "image": "/public/1783496151093-581831279.jpeg",
-      "categoryId": "cat2",
+      "id": "dR0ej-nGKG",
+      "title": "آموزش node.js",
+      "content": "توضیحات تستی",
+      "image": "/public/1783608060734-508081461.jpeg",
+      "categoryId": "KUk1h2uOpo",
       "author": "علیرضا",
-      "createdAt": "2026-07-08T07:35:51.098Z"
-    },
-    {
-      "id": "-hjXvsmhmq",
-      "title": "تست 3",
-      "content": "تست 3",
-      "image": "/public/1783496172654-201399539.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:36:12.658Z"
-    },
-    {
-      "id": "pCRHNCecao",
-      "title": "تست 4",
-      "content": "تست 4",
-      "image": "/public/1783496188002-937574189.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:36:28.008Z"
-    },
-    {
-      "id": "CJY4kVqo7m",
-      "title": "تست 9 ",
-      "content": "تست 9",
-      "image": "/public/1783496281308-226407458.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:38:01.310Z"
-    },
-    {
-      "id": "ww8cFr2nuU",
-      "title": "تست 10",
-      "content": "تست 10",
-      "image": "/public/1783496296220-625048558.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:38:16.224Z"
-    },
-    {
-      "id": "VP_i-t02_j",
-      "title": "تست 11",
-      "content": "تست 11",
-      "image": "/public/1783496312152-388214943.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:38:32.155Z"
-    },
-    {
-      "id": "pdBfR06L6a",
-      "title": "تست 12",
-      "content": "تست 12",
-      "image": "/public/1783496330850-858384621.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:38:50.853Z"
-    },
-    {
-      "id": "5iGrLAwJFg",
-      "title": "تست 13",
-      "content": "تست 13",
-      "image": "/public/1783496345115-634520424.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:39:05.118Z"
-    },
-    {
-      "id": "W3KHnkzwwP",
-      "title": "تست 15",
-      "content": "تست 15",
-      "image": "/public/1783496364226-782249176.jpeg",
-      "categoryId": "cat2",
-      "author": "علیرضا",
-      "createdAt": "2026-07-08T07:39:24.231Z"
+      "createdAt": "2026-07-09T14:41:00.752Z"
     }
   ],
   "comments": [
@@ -192,20 +107,12 @@
       "createdAt": "2023-03-11T10:45:00.000Z"
     },
     {
-      "id": "KEfkvWfau-",
-      "content": "خیلی عالی بود ، ممنون",
-      "articleId": "art1",
+      "id": "OEQc4bU0-u",
+      "content": "خیلی خوب بود",
+      "articleId": "dR0ej-nGKG",
       "author": "علیرضا",
       "userId": "-9tF9oF03y",
-      "createdAt": "2026-07-05T08:27:00.207Z"
-    },
-    {
-      "id": "6jrZmEvDKK",
-      "content": "very good",
-      "articleId": "art1",
-      "author": "zahra",
-      "userId": "7gMw4LaJ5v",
-      "createdAt": "2026-07-06T15:59:56.833Z"
+      "createdAt": "2026-07-09T14:42:18.642Z"
     }
   ],
   "users": [
@@ -216,14 +123,6 @@
       "password": "$2b$10$Uz4Thr6nYTGrTn9D91.CGubuXKqdVlBW.CjmQQW9ROfQRz4YsIp3G",
       "role": "admin",
       "createdAt": "2026-07-04T08:30:37.041Z"
-    },
-    {
-      "id": "QHP3ZnhIIU",
-      "username": "مهسا",
-      "email": "mahsa@gmail.com",
-      "password": "$2b$10$.F.1DNFvvxDMGo78SuMM9OZTyw3I8lAYrs5xfxh6JLXMBQiahzPBW",
-      "role": "admin",
-      "createdAt": "2026-07-06T08:39:26.811Z"
     }
   ]
 }

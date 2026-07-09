@@ -11,12 +11,6 @@ export function proxy(request: NextRequest) {
             return NextResponse.redirect(new URL('/', request.url))
         }
     }
-    if (cookie && request.nextUrl.pathname == "/admin/users") {
-        const userInfo: JwtType = jwtDecode(cookie);
-        if (userInfo.role == "admin" && userInfo.username != "علیرضا") {
-            return NextResponse.redirect(new URL('/admin', request.url))
-        }
-    }
     if (!cookie && request.nextUrl.pathname == "/auth/profile") {
         return NextResponse.redirect(new URL('/', request.url))
     }

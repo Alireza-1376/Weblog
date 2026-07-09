@@ -4,6 +4,7 @@ import Content from "../_components/Content";
 import Popular from "../_components/Popular";
 import Comment from "../_components/Comment";
 import Special from "../_components/Special";
+import Navbar from "@/app/(main)/_components/Navbar";
 
 
 
@@ -17,10 +18,10 @@ export default async function ArticlePage(props: PageProps<'/article/[articleId]
     ])
 
     const sortComments = comments.sort((a, b) => {
-        const dateA = new Date(a.createdAt) ;
-        const dateB = new Date(b.createdAt) ;
-        if(dateA > dateB) return -1 ;
-        if(dateA < dateB) return 1 ;
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        if (dateA > dateB) return -1;
+        if (dateA < dateB) return 1;
         return -1
     })
 
@@ -34,22 +35,24 @@ export default async function ArticlePage(props: PageProps<'/article/[articleId]
 
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="mt-20">
+            <Navbar allArticles={allArticles}/>
+            <div className="max-w-7xl mx-auto px-4 py-10">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <div className="lg:col-span-3">
+                        {/* Content */}
+                        <Content selectArticle={selectArticle} />
+                        {/* Popular Articles */}
+                        <Popular popularArticles={popularArticles} />
+                        {/* Comments */}
+                        <Comment comments={comments} articleId={articleId} />
+                    </div>
 
-                <div className="lg:col-span-3">
-                    {/* Content */}
-                    <Content selectArticle={selectArticle} />
-                    {/* Popular Articles */}
-                    <Popular popularArticles={popularArticles} />
-                    {/* Comments */}
-                    <Comment comments={comments} articleId={articleId} />
+                    {/* Sidebar */}
+                    <Special specialArticles={specialArticles} />
+
                 </div>
-
-                {/* Sidebar */}
-                <Special specialArticles={specialArticles} />
-
             </div>
         </div>
     );
