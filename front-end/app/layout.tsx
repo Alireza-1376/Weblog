@@ -16,11 +16,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const articles = await getAllArticles()
   return (
     <html lang="en" dir="rtl">
       <ThemeProvider>
-        <Navbar allArticles={articles} />
         {children}
       </ThemeProvider>
     </html>
