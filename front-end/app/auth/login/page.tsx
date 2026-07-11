@@ -5,7 +5,7 @@ import { Login } from '@/types/auth';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 

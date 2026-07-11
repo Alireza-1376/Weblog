@@ -1,5 +1,4 @@
-import Navbar from "@/app/(main)/_components/Navbar";
-import { getAllArticles, getArticleWithCategoryId } from "@/services/blogs";
+import { getArticleWithCategoryId } from "@/services/blogs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,14 +7,10 @@ async function CategoryId(props: PageProps<'/category/[categoryId]'>) {
     const { categoryId } = await props.params;
     const { title } = await props.searchParams;
 
-    const [allArticles, articles] = await Promise.all([
-        getAllArticles(),
-        getArticleWithCategoryId(categoryId)
-    ])
+    const articles= await getArticleWithCategoryId(categoryId)
 
     return (
         <div className="mt-20">
-            <Navbar allArticles={allArticles} />
             <section className="mx-auto max-w-7xl px-4 py-16">
                 {/* Header */}
                 <div className="mb-10">

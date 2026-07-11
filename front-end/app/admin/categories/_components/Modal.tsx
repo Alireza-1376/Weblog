@@ -3,7 +3,6 @@ import { addCategory } from "@/action/addCategory";
 import { getOneCategory } from "@/services/categories";
 import { CategoriesType } from "@/types/categories";
 import { useRouter, useSearchParams } from "next/navigation";
-
 import { useActionState, useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 import { FiFileText, FiSave, FiTag } from "react-icons/fi";

@@ -4,7 +4,6 @@ import Banner from "./_components/Banner";
 import States from "./_components/States";
 import Categories from "./_components/Categories";
 import Articles from "./_components/Articles";
-import Navbar from "./_components/Navbar";
 
 export const dynamic = 'force-static';
 
@@ -29,7 +28,6 @@ export default async function Home() {
 
   return (
     <main>
-      <Navbar allArticles={allArticles}/>
       <Banner />
       <States />
       <Categories allCategories={allCategories} />

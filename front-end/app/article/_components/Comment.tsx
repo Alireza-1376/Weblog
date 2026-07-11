@@ -1,7 +1,6 @@
 import { CommentType } from "@/types/comment";
 import { cookies } from "next/headers";
 import FormAddComment from "./FormAddComment";
-import { FiEdit2, FiTrash2 } from "react-icons/fi";
 import { jwtDecode } from "jwt-decode";
 import { JwtType } from "@/types/auth";
 import ActivityBtns from "./ActivityBtns";

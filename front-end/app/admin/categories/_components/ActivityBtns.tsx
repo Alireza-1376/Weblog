@@ -3,7 +3,6 @@ import { deleteCategory } from "@/action/deleteCategory";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
-import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 
 function ActivityBtns({ categoryId }: { categoryId: string }) {

@@ -4,9 +4,6 @@ import Content from "../_components/Content";
 import Popular from "../_components/Popular";
 import Comment from "../_components/Comment";
 import Special from "../_components/Special";
-import Navbar from "@/app/(main)/_components/Navbar";
-
-
 
 
 export default async function ArticlePage(props: PageProps<'/article/[articleId]'>) {
@@ -36,7 +33,6 @@ export default async function ArticlePage(props: PageProps<'/article/[articleId]
 
     return (
         <div className="mt-20">
-            <Navbar allArticles={allArticles}/>
             <div className="max-w-7xl mx-auto px-4 py-10">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 

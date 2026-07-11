@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { FiPlus } from "react-icons/fi";
 import { getAllArticles } from "@/services/blogs";
-import ActivityBtns from "./_components/ActivityBtns";
 import Pagination from "./_components/Pagination";
 
 export default async function ArticlesTable() {
