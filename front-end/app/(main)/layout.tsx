@@ -7,8 +7,10 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const allArticles =await getAllArticles()
     return (
         <div>
+            <Navbar allArticles={allArticles} />
             {children}
             <Footer />
         </div>

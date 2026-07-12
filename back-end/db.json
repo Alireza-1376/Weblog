@@ -14,11 +14,6 @@
       "id": "cat3",
       "title": "هوش مصنوعی",
       "description": "مقالات مرتبط با هوش مصنوعی و یادگیری ماشین"
-    },
-    {
-      "id": "KUk1h2uOpo",
-      "title": "دسته بندی تستی",
-      "description": "توضیحات تستی"
     }
   ],
   "articles": [
@@ -68,13 +63,13 @@
       "createdAt": "2023-03-10T09:15:00.000Z"
     },
     {
-      "id": "dR0ej-nGKG",
-      "title": "آموزش node.js",
+      "id": "HgOv1J2tJq",
+      "title": "تستی",
       "content": "توضیحات تستی",
-      "image": "/public/1783608060734-508081461.jpeg",
-      "categoryId": "KUk1h2uOpo",
+      "image": "/public/1783841455179-494244033.jpeg",
+      "categoryId": "cat2",
       "author": "علیرضا",
-      "createdAt": "2026-07-09T14:41:00.752Z"
+      "createdAt": "2026-07-12T07:30:55.195Z"
     }
   ],
   "comments": [
@@ -107,12 +102,12 @@
       "createdAt": "2023-03-11T10:45:00.000Z"
     },
     {
-      "id": "OEQc4bU0-u",
+      "id": "vojSeEUepf",
       "content": "خیلی خوب بود",
-      "articleId": "dR0ej-nGKG",
+      "articleId": "HgOv1J2tJq",
       "author": "علیرضا",
       "userId": "-9tF9oF03y",
-      "createdAt": "2026-07-09T14:42:18.642Z"
+      "createdAt": "2026-07-12T07:31:37.160Z"
     }
   ],
   "users": [

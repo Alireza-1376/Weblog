@@ -1,7 +1,4 @@
 import { Metadata } from "next";
-import Footer from "../(main)/_components/Footer";
-import Navbar from "../(main)/_components/Navbar";
-import { getAllArticles } from "@/services/blogs";
 
 export const metadata: Metadata = {
     title: "دسته بندی",
@@ -13,12 +10,9 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const allArticles = await getAllArticles()
     return (
-        <div>        
-            <Navbar allArticles={allArticles} /> 
+        <div>
             {children}
-            <Footer />
         </div>
     );
 }
